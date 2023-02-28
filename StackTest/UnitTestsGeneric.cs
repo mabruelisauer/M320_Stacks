@@ -10,7 +10,7 @@ namespace StackTest
         public void IsEmptyTest_false()
         {
             //arrange
-            MyStack myStack = new MyStack(2);
+            var myStack = new MyGenericStack<int>(3);
 
             //act
             myStack.push(15);
