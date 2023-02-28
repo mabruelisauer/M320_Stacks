@@ -78,7 +78,7 @@ namespace Stack
         /// Checks if stack is empty
         /// </summary>
         /// <returns>Returns true or false</returns>
-        public bool isEmpty()
+        public bool IsEmpty()
         {
             if (index == -1)
             {
@@ -94,7 +94,7 @@ namespace Stack
         /// Checks if stack is full
         /// </summary>
         /// <returns>Returns true or false</returns>
-        public bool isFull()
+        public bool IsFull()
         {
             if (index + 1 == Size)
             {
@@ -115,30 +115,6 @@ namespace Stack
             return string.Join(", ", data);
         }
 
-        public bool IsPalindrome(string input)
-        {
-            var stack = new MyGenericStack<char>(100);
-            int middle = input.Length / 2;
-
-            for (int i = 0; i < middle; i++)
-            {
-                stack.Push(input[i]);
-            }
-
-            if (input.Length % 2 != 0)
-            {
-                middle++;
-            }
-
-            for (int i = middle; i < input.Length; i++)
-            {
-                if (stack.Pop() != input[i])
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
+        
     }
 }
